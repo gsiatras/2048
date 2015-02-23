@@ -156,6 +156,9 @@ class TwentyFortyEight:
         
             
     def new_tile(self):
+        """
+        Create a new tile
+        """              
         probabilities = []
         for this_i in range(100):
             if this_i < 90:
@@ -171,10 +174,16 @@ class TwentyFortyEight:
         
 
     def set_tile(self, row, col, value):
+        """
+        Set the tile at position [row][col] to the given value
+        """
         self._grid[row][col] = value
 
 
     def get_tile(self, row, col):
+        """
+        Return the value of the tile at position [row][col]
+        """          
         return self._grid[row][col]
 
 poc_2048_gui.run_gui(TwentyFortyEight(4, 4))
